@@ -10,10 +10,10 @@ router.post('/', async (req, res) => {
     res.status(200).json({
       _id: user._id,
       username: user.username,
-      token: jwt.sign({ id: user._id }, 'masobimat'),
+      token: jwt.sign({ id: user._id }, 'passdi'),
     });
   } else {
-    res.status(400).send('Username or password incorrect');
+    res.status(400).send('Username or password incorrect. Please try again.');
   }
 });
 
